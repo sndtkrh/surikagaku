@@ -7,7 +7,14 @@
  * 単体複体のホモロジーを求めるときなどに使用する
  */
 
-// 拡張Euclid互除法
+long long gcd(int a, int b){
+  if (b == 0){
+    return a;
+  } else {
+    return gcd(b, a % b);
+  }
+}
+// Extended Euclidean Algorithm
 // ax + by = gcd(a,b);
 long long extgcd(long long a, long long b, long long &x, long long &y){
   long long g = a; x = 1; y = 0;
@@ -91,7 +98,7 @@ std::vector<long long> compute_snf(Matrix M){
   // 対角成分に関して diag[i] | diag[i+1] for any i が成立するように調整
   for(int i = 0; i < diag.size() - 1; i++){
     if( diag[i+1] % diag[i] != 0 ){
-      int g = std::__gcd( diag[i], diag[i+1] ); // gcd__(x,y) はgcc拡張機能
+      int g = gcd( diag[i], diag[i+1] );
       int p = diag[i];
       diag[i] = g;
       diag[i+1] *= -p / g;
