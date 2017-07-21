@@ -40,7 +40,7 @@ public:
   }
 
   void print_boundary_map(int d){
-    std::cout << "boundary map : C^" << d << " -> C^"<< d-1 << std::endl;
+    std::cout << "boundary map : C_" << d << " -> C_"<< d-1 << std::endl;
     if( boundary_map[d].size() == 0 ){
       std::cout << "size = ( 0 * 0 )" << std::endl;
     }else{
@@ -49,7 +49,7 @@ public:
     }
   }
   void print_boundary_map_snf(int d){
-    std::cout << "boundary map : C^" << d << " -> C^"<< d-1 << std::endl;
+    std::cout << "boundary map : C_" << d << " -> C_"<< d-1 << std::endl;
     std::cout << "Smith normal form (size=" <<  boundary_map_snf[d].size() << ")" << std::endl;
     std::cout << boundary_map_snf[d] << std::endl;
   }
@@ -78,7 +78,7 @@ public:
 
   friend std::ostream& operator<< (std::ostream & os, const Homology & h){
     for(int d = 1; d <= h.dim; d++){
-      os << "boundary map : C^" << d << " -> C^"<< d-1 << "\n";
+      os << "boundary map : C_" << d << " -> C_"<< d-1 << "\n";
       // matrix
       os << "size = (" << h.boundary_map[d].size() << " * " << h.boundary_map[d][0].size() << ")\n";
       os << h.boundary_map[d] << "\n";
