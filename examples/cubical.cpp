@@ -20,10 +20,9 @@ int main(){
   Cube<3> f6( {Interval(1,true), Interval(0,false), Interval(0,false)} );
   std::vector< std::vector< Cube<3> > > hexahedron = { {}, {}, {f1,f2,f3,f4,f5,f6} };
 
-  hexahedron = get_cubicalset( hexahedron );
-  int dim = 0;
-  std::cout << hexahedron << std::endl;
-  CubicalHomology<3> cubical_homology(hexahedron);
+  square = get_cubicalset( square );
+  std::cout << square << std::endl;
+  CubicalHomology<2> cubical_homology(square);
   std::cout << cubical_homology << std::endl;
 }
 
