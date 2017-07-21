@@ -2,9 +2,6 @@
 #include <map>
 #include <set>
 #include <algorithm>
-#include "../src/matrix.hpp"
-#include "../src/homology.hpp"
-#include "../src/Smith_normal_form.hpp"
 #include "../src/simplicial_homology.hpp"
 
 int main(){

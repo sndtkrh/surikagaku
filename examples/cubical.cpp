@@ -3,11 +3,7 @@
 #include <algorithm>
 #include <iostream>
 #include <set>
-#include "../src/Smith_normal_form.hpp"
-#include "../src/homology.hpp"
 #include "../src/cubical_homology.hpp"
-
-
 
 int main(){
   // square
