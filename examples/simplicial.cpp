@@ -1,10 +1,10 @@
 #include <vector>
-#include <map>
-#include <set>
-#include <algorithm>
+#include <iostream>
 #include "../src/simplicial_homology.hpp"
 
 int main(){
+  Complex S1 =
+    { {}, { {0,1}, {1,2}, {2,0} } };
   Complex T2 = // 2-dim Torus
     {
       {}, {},
@@ -42,8 +42,8 @@ int main(){
     };
   Complex S2 = { {}, {}, { {0,1,2}, {0,1,3}, {0,2,3}, {1,2,3} } }; // 2-dim Sphere
   
-  T2 = get_complex( T2 );
-  std::cout << T2 << std::endl;
-  SimplicialHomology H( T2 );
+  S1 = get_complex( S1 );
+  std::cout << S1 << std::endl;
+  SimplicialHomology H( S1 );
   std::cout << H << std::endl;
 }
