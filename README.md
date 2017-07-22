@@ -41,3 +41,9 @@ You can see examples in `examples/cubical.cpp`.
 方体集合のホモロジーを計算するには
 `src/cubical_homology.hpp`をインクルードします．
 具体的な例は`examples/cubical.cpp`にあります．
+
+## Licese
+MIT License
+
+## 歴史
+このプログラムは2017年の京都大学理学部専門科目である数理科学特論のレポート問題を解くために開発されました．
