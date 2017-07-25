@@ -177,7 +177,7 @@ template <int DIM>
 std::ostream& operator<<(std::ostream & os, std::vector<std::vector<Cube<DIM> > > & cubicalset){
   int dim = 0;
   for( auto & cs : cubicalset ){
-    os << dim << "\n";
+    os << "dim=" << dim << ", #=" << cs.size() << "\n";
     dim++;
     for( Cube<DIM> & c : cs ){
       os << c << ", ";
